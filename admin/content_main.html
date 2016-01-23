@@ -299,27 +299,59 @@ function trimit(strobj)
         		</li>
 |$|PHP|
 <?php
-$data = <<<END
+$daplugins = array();
+$daplugins[0] = <<<END
 |PLUGIN_0_ADMIN_TXT|
 END;
-if (strlen($data) > 1) {
-echo <<<END
-<li class="item">|PLUGIN_0_ADMIN_TXT|</li>
-|PLUGIN_2_ADMIN_TXT|
-|PLUGIN_4_ADMIN_TXT|
-END;
-}
-
-$data = <<<END
+$daplugins[1] = <<<END
 |PLUGIN_1_ADMIN_TXT|
 END;
-if (strlen($data) > 1) {
-echo <<<END
-<li class="item">|PLUGIN_1_ADMIN_TXT|</li>
+$daplugins[2] = <<<END
+|PLUGIN_2_ADMIN_TXT|
+END;
+$daplugins[3] = <<<END
 |PLUGIN_3_ADMIN_TXT|
+END;
+$daplugins[4] = <<<END
+|PLUGIN_4_ADMIN_TXT|
+END;
+$daplugins[5] = <<<END
 |PLUGIN_5_ADMIN_TXT|
 END;
+$daplugins[6] = <<<END
+|PLUGIN_6_ADMIN_TXT|
+END;
+$daplugins[7] = <<<END
+|PLUGIN_7_ADMIN_TXT|
+END;
+
+foreach($daplugins as $data)
+	find_its_icon_and_output($data);
+
+function find_its_icon_and_output($data) {
+	if(strlen($data) > 2) {
+		$icon = 'IMG_SKIN_ADMIN_';
+		$temp = strtolower($data);
+		if(strstr($temp,"sql") || strstr($temp,"postgre")) {
+			$icon .= '042';
+		} elseif(strstr($temp,"letsenc")) {
+			$icon .= '000';
+		} elseif(strstr($temp,"inst") || strstr($temp,"softc") || strstr($temp,"template")) {
+			$icon .= '033';
+		} elseif(strstr($temp,"lve")) {
+			$icon .= '026';
+		} elseif(strstr($temp,"litespeed") || strstr($temp,"nginx")) {
+			$icon .= '029';
+		} else {
+			$icon .= '027';
+		}
+		$count = 1;
+		$half = str_replace(array('">', '" >'), '"><img class="ui image" src="'.$icon.'" alt=""/><div class="content"><div class="header">', $data, $count);
+		$final = str_replace('</a>', '</div></div></a>', $half, $count);
+		echo '<li class="item">'.$final.'</li>';
+	}
 }
+
 ?>
 DONE|
 			</ul>
@@ -330,15 +362,3 @@ DONE|
 		set_admin_level_updates();
 	</script>
 |*endif|
-
-
-
-
-
-
-
-
-
-
-
-

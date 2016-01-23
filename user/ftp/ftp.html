@@ -1,12 +1,16 @@
-|?TREE=&raquo; `ALL_DOMAINS_SELECT` &raquo; <a class=tree href="/CMD_FTP?DOMAIN=`DOMAIN`">`LANG_FTP_SETUP`</a>|
+|?TREE=&raquo; `ALL_DOMAINS_SELECT` &raquo; <a class=tree href="/CMD_FTP?domain=`DOMAIN`">`LANG_FTP_SETUP`</a>|
 |?HELP_SECTION=`USER_HELPER`/ftp.html|
 |HTM_USER_TOP|
 
 <h3 class="head_title">|LANG_FTP_SETUP|</h3>
 
-|*if USERAFTP="ON"|
-<a href="CMD_FTP_SETTINGS?DOMAIN=|DOMAIN|">|LANG_ANON_FTP_SETTINGS|</a>&nbsp;&nbsp;&nbsp;&nbsp;|LANG_FLOGIN|: |ANONLOGIN|<br>
+|*if USERFTPMAX!="0"|
+<a href="HTM_FTP_CREATE?domain=|DOMAIN|">|LANG_ADD_FTP_MANAGEMENT|</a><br>
 |*endif|
+|*if USERAFTP="ON"|
+<a href="CMD_FTP_SETTINGS?domain=|DOMAIN|">|LANG_ANON_FTP_SETTINGS|</a>&nbsp;&nbsp;&nbsp;&nbsp;|LANG_FLOGIN|: |ANONLOGIN|<br>
+|*endif|
+
 |FTPACCOUNTS|
 
 |HTM_USER_BOTTOM|

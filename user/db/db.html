@@ -3,6 +3,9 @@
 |HTM_USER_TOP|
 <h3 class="head_title">|LANG_MYSQL_SETUP|</h3>
 
+|*if USERDATABASEMAX!="0"|
+<a href="CMD_DB_CREATE?domain=|DOMAIN|">|LANG_CREATE_DB|</a><br>
+|*endif|
 |DATABASES|
 
 <form name=backupform action="/CMD_DB" enctype="multipart/form-data" method="POST">

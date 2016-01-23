@@ -5,41 +5,9 @@
     	<div class="sixteen wide column listbox">
     		<h3>|LANG_SITEMAG|</h3>
 			<ul class="ui horizontal selection list">
-				<li class="item">
-					<a href="/CMD_FILE_MANAGER?domain=|domain|">
-						<img class="ui image" src="IMG_SKIN_ADMIN_047" alt="" />
-						<div class="content">
-							<div class="header">|LANG_FILE_MANAGER|</div>
-        				</div>
-        			</a>
-        		</li>
 |*if ALLOWED_CMD_DOMAIN!="no"|
           		<li class="item">
-					<a href="/HTM_ADD_DOMAIN">
-						<img class="ui image" src="IMG_SKIN_ADMIN_066" alt="" />
-						<div class="content">
-							<div class="header">|MAIN_ADD_DOMAIN|</div>
-        				</div>
-        			</a>
-        		</li>
-          		<li class="item">
 					<a href="/CMD_ADDITIONAL_DOMAINS?domain=|domain|">
-						<img class="ui image" src="IMG_SKIN_ADMIN_067" alt="" />
-						<div class="content">
-							<div class="header">|MAIN_DEL_DOMAIN|</div>
-        				</div>
-        			</a>
-        		</li>
-          		<li class="item">
-					<a href="/CMD_CHANGE_DOMAIN">
-						<img class="ui image" src="IMG_SKIN_ADMIN_065" alt="" />
-						<div class="content">
-							<div class="header">|MAIN_MOD_DOMAIN|</div>
-        				</div>
-        			</a>
-        		</li>
-          		<li class="item">
-					<a href="/CMD_ADDITIONAL_DOMAINS?action=view&domain=|domain|">
 						<img class="ui image" src="IMG_SKIN_ADMIN_070" alt="" />
 						<div class="content">
 							<div class="header">|MAIN_SETTING_DOMAIN|</div>
@@ -67,7 +35,6 @@
         			</a>
         		</li>
 |*endif|
-
 			    <li class="item">
 					<a href="/CMD_REDIRECT?domain=|domain|">
 						<img class="ui image" src="IMG_SKIN_ADMIN_045" alt="" />
@@ -84,48 +51,6 @@
         				</div>
         			</a>
         		</li>
-			</ul>
-        </div>
-	
-        <div class="sixteen wide column listbox">
-            <h3>数据库管理</h3>
-			<ul class="ui horizontal selection list">
-|*if USERDATABASEMAX!="0"|
-				<li class="item">
-					<a href="CMD_DB_CREATE?DOMAIN=|DOMAIN|">
-						<img class="ui image" src="IMG_SKIN_ADMIN_069" alt="" />
-						<div class="content">
-							<div class="header">|LANG_CREATE_DB|</div>
-        				</div>
-        			</a>
-        		</li>
-|*endif|
-        		
-|*if USERDATABASEMAX!="0"|
-				<li class="item">
-					<a href="/CMD_DB?domain=|domain|">
-						<img class="ui image" src="IMG_SKIN_ADMIN_043" alt="" />
-						<div class="content">
-							<div class="header">|LANG_MYSQL_MANAGEMENT|</div>
-        				</div>
-        			</a>
-        		</li>
-|*endif|
-
-				<li class="item">
-					<a href="http://|HOSTNAME|/phpmyadmin" target="_blank">
-						<img class="ui image" src="IMG_SKIN_ADMIN_042" alt="" />
-						<div class="content">
-							<div class="header">phpMyAdmin</div>
-        				</div>
-					</a>
-				</li>
-			</ul>
-        </div>
-        
-        <div class="sixteen wide column listbox">
-            <h3>|LANG_OTHERMAG|</h3>
-			<ul class="ui horizontal selection list">
 				<li class="item">
 					<a href="/CMD_USER_STATS?domain=|domain|">
 						<img class="ui image" src="IMG_SKIN_ADMIN_021" alt="" />
@@ -134,7 +59,6 @@
         				</div>
         			</a>
         		</li>
-
 			    <li class="item">
 					<a href="/HTM_ERROR_PAGES?domain=|domain|">
 						<img class="ui image" src="IMG_SKIN_ADMIN_050" alt="" />
@@ -153,106 +77,10 @@
         			</a>
         		</li>
 |*endif|
-				<li class="item">
-					<a href="/CMD_PROTECTED_DIRECTORIES?domain=|domain|">
-						<img class="ui image" src="IMG_SKIN_ADMIN_040" alt="" />
-						<div class="content">
-							<div class="header">|LANG_PASS_PROC_DIRS|</div>
-        				</div>
-        			</a>
-        		</li>
-|*if USERCRON="ON"|
-				<li class="item">
-					<a href="/CMD_CRON_JOBS?domain=|domain|">
-						<img class="ui image" src="IMG_SKIN_ADMIN_018" alt="" />
-						<div class="content">
-							<div class="header">|LANG_CRONJOBS|</div>
-        				</div>
-        			</a>
-        		</li>
-|*endif|
-				<li class="item">
-					<a href="/CMD_MIME_TYPES?domain=|domain|">
-						<img class="ui image" src="IMG_SKIN_ADMIN_049" alt="" />
-						<div class="content">
-							<div class="header">|LANG_MIMETYPES|</div>
-        				</div>
-        			</a>
-        		</li>
-				<li class="item">
-					<a href="/CMD_HANDLERS?domain=|domain|">
-						<img class="ui image" src="IMG_SKIN_ADMIN_039" alt="" />
-						<div class="content">
-							<div class="header">|LANG_APACHE_HANDLERS|</div>
-        				</div>
-        			</a>
-        		</li>
-
-			    <li class="item">
-					<a href="/CMD_PERL_MODULES?domain=|domain|">
-						<img class="ui image" src="IMG_SKIN_ADMIN_051" alt="" />
-						<div class="content">
-							<div class="header">|LANG_INSTALLED_PERL_MODULES|</div>
-        				</div>
-        			</a>
-        		</li>
-				
 			</ul>
         </div>
-	
+
         <div class="sixteen wide column listbox">
-            <h3>|LANG_ACCOUNTMAG|</h3>
-			<ul class="ui horizontal selection list">
-|*if USERFTPMAX!="0"|
-			    <li class="item">
-					<a href="HTM_FTP_CREATE?DOMAIN=|DOMAIN|&owned=|OWNEDIP|">
-						<img class="ui image" src="IMG_SKIN_ADMIN_068" alt="" />
-						<div class="content">
-							<div class="header">|LANG_ADD_FTP_MANAGEMENT|</div>
-        				</div>
-        			</a>
-        		</li>
-|*endif|
-|*if USERFTPMAX!="0"|
-			    <li class="item">
-					<a href="/CMD_FTP?domain=|domain|">
-						<img class="ui image" src="IMG_SKIN_ADMIN_047" alt="" />
-						<div class="content">
-							<div class="header">|LANG_FTP_MANAGEMENT|</div>
-        				</div>
-        			</a>
-        		</li>
-|*endif|
-				<li class="item">
-					<a href="/HTM_PASSWD?domain=|domain|">
-					<img class="ui image" src="IMG_SKIN_ADMIN_007" alt="" />
-						<div class="content">
-							<div class="header">|LANG_CHANGE_PASSWORD|</div>
-        				</div>
-        			</a>
-        		</li>
-          		<li class="item">
-					<a href="/CMD_LOGIN_HISTORY?domain=|domain|">
-						<img class="ui image" src="IMG_SKIN_ADMIN_061" alt="" />
-						<div class="content">
-							<div class="header">|LANG_LOGIN_HISTORY|</div>
-        				</div>
-        			</a>
-        		</li>
-|*if USERSYSINFO="ON"|
-			    <li class="item">
-					<a href="/CMD_SYSTEM_INFO?domain=|domain|">
-						<img class="ui image" src="IMG_SKIN_ADMIN_019" alt="" />
-						<div class="content">
-							<div class="header">|LANG_SERVER_INFO|</div>
-        				</div>
-        			</a>
-        		</li>
-|*endif|
-			</ul>
-        </div>
-
-        <div class="sixteen wide column listbox" style="display: none">
         	<h3>|LANG_MAILMAG|</h3>
 			<ul class="ui horizontal selection list">
 |*if USEREMAILMAX!="0"|
@@ -341,11 +169,201 @@
 |*if HIDE_WEBMAIL_LINKS="yes"|
 	|?SHOW_LINKS=no|
 |*endif|
-|*if HAVE_WEBMAIL="yes"|
-<a href="|WEBAPPS_SSL|://|HOSTNAME|/webmail" target="_blank">|LANG_WEBMAIL_UEBI|</a><br>
+|*if HAVE_SQUIRRELMAIL="yes"|
+				<li class="item">
+					<a href="|HTTP|://|HOSTNAME|/squirrelmail" target="_blank">
+						<img class="ui image" src="IMG_SKIN_ADMIN_057" alt="" />
+						<div class="content">
+							<div class="header">SquirrelMail</div>
+        				</div>
+        			</a>
+        		</li>
+|*endif|
+|*if HAVE_ROUNDCUBE="yes"|
+				<li class="item">
+					<a href="|HTTP|://|HOSTNAME|/roundcube" target="_blank">
+						<img class="ui image" src="IMG_SKIN_ADMIN_057" alt="" />
+						<div class="content">
+							<div class="header">RoundCube</div>
+        				</div>
+        			</a>
+        		</li>
 |*endif|
             </ul>
 		</div>
+	
+        <div class="sixteen wide column listbox">
+            <h3>|LANG_ACCOUNTMAG|</h3>
+			<ul class="ui horizontal selection list">
+				<li class="item">
+					<a href="/CMD_FILE_MANAGER?domain=|domain|">
+						<img class="ui image" src="IMG_SKIN_ADMIN_047" alt="" />
+						<div class="content">
+							<div class="header">|LANG_FILE_MANAGER|</div>
+        				</div>
+        			</a>
+        		</li>
+|*if USERFTPMAX!="0"|
+			    <li class="item">
+					<a href="/CMD_FTP?domain=|domain|">
+						<img class="ui image" src="IMG_SKIN_ADMIN_047" alt="" />
+						<div class="content">
+							<div class="header">|LANG_FTP_MANAGEMENT|</div>
+        				</div>
+        			</a>
+        		</li>
+|*endif|
+				<li class="item">
+					<a href="/HTM_PASSWD?domain=|domain|">
+					<img class="ui image" src="IMG_SKIN_ADMIN_007" alt="" />
+						<div class="content">
+							<div class="header">|LANG_CHANGE_PASSWORD|</div>
+        				</div>
+        			</a>
+        		</li>
+          		<li class="item">
+					<a href="/CMD_LOGIN_HISTORY?domain=|domain|">
+						<img class="ui image" src="IMG_SKIN_ADMIN_061" alt="" />
+						<div class="content">
+							<div class="header">|LANG_LOGIN_HISTORY|</div>
+        				</div>
+        			</a>
+        		</li>
+|*if USERDATABASEMAX!="0"|
+				<li class="item">
+					<a href="/CMD_DB?domain=|domain|">
+						<img class="ui image" src="IMG_SKIN_ADMIN_043" alt="" />
+						<div class="content">
+							<div class="header">|LANG_MYSQL_MANAGEMENT|</div>
+        				</div>
+        			</a>
+        		</li>
+|*endif|
+				<li class="item">
+					<a href="|HTTP|://|HOSTNAME|/phpmyadmin" target="_blank">
+						<img class="ui image" src="IMG_SKIN_ADMIN_042" alt="" />
+						<div class="content">
+							<div class="header">phpMyAdmin</div>
+        				</div>
+					</a>
+				</li>
+|*if USERCRON="ON"|
+				<li class="item">
+					<a href="/CMD_CRON_JOBS?domain=|domain|">
+						<img class="ui image" src="IMG_SKIN_ADMIN_018" alt="" />
+						<div class="content">
+							<div class="header">|LANG_CRONJOBS|</div>
+        				</div>
+        			</a>
+        		</li>
+|*endif|
+|*if USERSYSINFO="ON"|
+			    <li class="item">
+					<a href="/CMD_SYSTEM_INFO?domain=|domain|">
+						<img class="ui image" src="IMG_SKIN_ADMIN_019" alt="" />
+						<div class="content">
+							<div class="header">|LANG_SERVER_INFO|</div>
+        				</div>
+        			</a>
+        		</li>
+|*endif|
+			</ul>
+        </div>
+
+        <div class="sixteen wide column listbox">
+            <h3>|LANG_OTHERMAG|</h3>
+			<ul class="ui horizontal selection list">
+				<li class="item">
+					<a href="/CMD_PROTECTED_DIRECTORIES?domain=|domain|">
+						<img class="ui image" src="IMG_SKIN_ADMIN_040" alt="" />
+						<div class="content">
+							<div class="header">|LANG_PASS_PROC_DIRS|</div>
+        				</div>
+        			</a>
+        		</li>
+				<li class="item">
+					<a href="/CMD_MIME_TYPES?domain=|domain|">
+						<img class="ui image" src="IMG_SKIN_ADMIN_049" alt="" />
+						<div class="content">
+							<div class="header">|LANG_MIMETYPES|</div>
+        				</div>
+        			</a>
+        		</li>
+				<li class="item">
+					<a href="/CMD_HANDLERS?domain=|domain|">
+						<img class="ui image" src="IMG_SKIN_ADMIN_039" alt="" />
+						<div class="content">
+							<div class="header">|LANG_APACHE_HANDLERS|</div>
+        				</div>
+        			</a>
+        		</li>
+			    <li class="item">
+					<a href="/CMD_PERL_MODULES?domain=|domain|">
+						<img class="ui image" src="IMG_SKIN_ADMIN_051" alt="" />
+						<div class="content">
+							<div class="header">|LANG_INSTALLED_PERL_MODULES|</div>
+        				</div>
+        			</a>
+        		</li>
+|$/usr/local/bin/php
+<?php
+$daplugins = array();
+$daplugins[0] = <<<END
+|PLUGIN_0_TXT|
+END;
+$daplugins[1] = <<<END
+|PLUGIN_1_TXT|
+END;
+$daplugins[2] = <<<END
+|PLUGIN_2_TXT|
+END;
+$daplugins[3] = <<<END
+|PLUGIN_3_TXT|
+END;
+$daplugins[4] = <<<END
+|PLUGIN_4_TXT|
+END;
+$daplugins[5] = <<<END
+|PLUGIN_5_TXT|
+END;
+$daplugins[6] = <<<END
+|PLUGIN_6_TXT|
+END;
+$daplugins[7] = <<<END
+|PLUGIN_7_TXT|
+END;
+
+foreach($daplugins as $data)
+	find_its_icon_and_output($data);
+
+function find_its_icon_and_output($data) {
+	if(strlen($data) > 2) {
+		$icon = 'IMG_SKIN_ADMIN_';
+		$temp = strtolower($data);
+		if(strstr($temp,"sql") || strstr($temp,"postgre")) {
+			$icon .= '042';
+		} elseif(strstr($temp,"letsenc")) {
+			$icon .= '000';
+		} elseif(strstr($temp,"inst") || strstr($temp,"softc") || strstr($temp,"template")) {
+			$icon .= '033';
+		} elseif(strstr($temp,"lve")) {
+			$icon .= '026';
+		} elseif(strstr($temp,"litespeed") || strstr($temp,"nginx")) {
+			$icon .= '029';
+		} else {
+			$icon .= '027';
+		}
+		$count = 1;
+		$half = str_replace(array('">', '" >'), '"><img class="ui image" src="'.$icon.'" alt=""/><div class="content"><div class="header">', $data, $count);
+		$final = str_replace('</a>', '</div></div></a>', $half, $count);
+		echo '<li class="item">'.$final.'</li>';
+	}
+}
+
+?>
+DONE|
+			</ul>
+        </div>
 	</div>
 
 |HTM_USER_BOTTOM|

@@ -216,7 +216,7 @@ header.ui.menu > .item:first-child {
 	display: inline-table;
 }
 .listbox .ui.horizontal.list>.item:first-child {
-	padding-left: .5em !important;
+	padding-left: 1em !important;
 }
 ul.ui.list {
 	margin: 0;
@@ -262,7 +262,7 @@ ul.ui.list li:before {
 
 .ui.inverted.black.footer {
 	margin-top: 40px;
-	padding: 4em 0em 5em;
+	padding: 1em 0em 1em;
 }
 .ui.inverted.black.footer a {
 	color: #FFF;
@@ -1018,6 +1018,10 @@ textarea.ssl_text {
 @media (max-width: 700px) {
 	.listbox .ui.horizontal.list>.item {
 		width: 96%;
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+		margin-left: 2% !important;
+		margin-right: 2% !important;
 	}
 	header.ui.menu h1 {
 		display: block;
@@ -1068,9 +1072,6 @@ textarea.ssl_text {
 	}
 	.ui.info.message {
 		width: 90%;
-	}
-	footer {
-		display: none;
 	}
 }
 @media (max-width: 890px) {

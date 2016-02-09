@@ -22,7 +22,6 @@ $(document).ready(function() {
 		$(".right.menu").slideToggle("5000");
 	});
 	
-	//语言 切换
 	$(".select-language").dropdown({
 		on: 'hover',
 	    onChange: function (val) {
@@ -40,26 +39,9 @@ $(document).ready(function() {
 	    }
 	});
 	
-	//UI 切换
-	$(".select-ui").dropdown({
-		on: 'hover',
-	    onChange: function (val) {
-			if(val!=''){
-				$(".ui.inverted.menu").removeClass("red orange yellow green teal blue purple").addClass(val);
-			}
-	    }
-	});
-	
 	$(".fixed.launch.button").click(function(){
 		$(".wide.right.aside")
 			.sidebar("toggle")
-		;
-	});
-	
-	// 底部 捐赠按钮
-	$(".ui.button.alipay").click(function(){
-		$(".small.modal")
-			.modal("show")
 		;
 	});
 	

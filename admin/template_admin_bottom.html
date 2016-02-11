@@ -33,11 +33,11 @@
 <?php
 include |ROOT|."inc/functions.php";
 ?>
-	<a class="item"><div class="ui blue label"><?php echo $sysInfo['loadAvg'];?></div>|LANG_SYSTEM_LOAD|:</a>
-	<a class="item"><div class="ui blue label"><?php echo $sysInfo['memTotal'];?>M</div>|LANG_TOTAL_MEMORY|:</a>
-	<a class="item"><div class="ui blue label"><?php echo $sysInfo['memUsed'];?>M</div>|LANG_USED_MEMORY|:</a>
-	<a class="item"><div class="ui blue label"><?php echo $sysInfo['memFree'];?>M</div>|LANG_FREE_MEMORY|:</a>
-	<a class="item"><div class="ui blue label"><?php echo $sysInfo['uptime']; ?></div>|LANG_UPTIME|:</a>
+	<a class="item"><div class="ui blue label"><?php echo $sysInfo['loadAvg'];?></div>|LANG_SYSTEM_LOAD|</a>
+	<a class="item"><div class="ui blue label"><?php echo $sysInfo['memTotal'];?>M</div>|LANG_TOTAL_MEMORY|</a>
+	<a class="item"><div class="ui blue label"><?php echo $sysInfo['memRealUsed'];?>M</div>|LANG_USED_MEMORY|</a>
+	<a class="item"><div class="ui blue label"><?php echo $sysInfo['memRealFree'];?>M</div>|LANG_FREE_MEMORY|</a>
+	<a class="item"><div class="ui blue label"><?php echo $sysInfo['uptime']; ?></div>|LANG_UPTIME|</a>
 DONE|
 </div>
 

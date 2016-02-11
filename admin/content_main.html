@@ -23,10 +23,51 @@ function trimit(strobj)
 	return true;
 }
 
+function doSearch(type) {
+	if (document.searchform)
+		with (document.searchform) {
+			trimit(value);
+
+			if (type == 'user') {
+				value1.value=value.value
+				value7.value='';
+			} else {
+				value7.value=value.value.toLowerCase();
+				value1.value='';
+			}
+
+			submit();
+		}
+}
+
 // -->
 </script>
 
 <div class="ui grid">
+	
+	<div class="sixteen wide column">
+		<div class="ui input search">
+			<form action="/CMD_ALL_USER_SHOW" method="GET" name="searchform" onSubmit="doSearch('default');">
+				<input type="hidden" name="comparison1" value="contains">
+				<input type="hidden" name="comparison7" value="contains">
+				<input type="hidden" name="value1" value="">
+				<input type="hidden" name="value7" value="">
+				<input type="text" name="value" onClick="this.select()" placeholder="|LANG_CONTAINS|">
+				<div class="ui blue button" onClick="doSearch('user')"><i class="icon user"></i> |LANG_USER|</div>
+				<div class="ui green button" onClick="doSearch('domain')"><i class="icon globe"></i> |LANG_DOMAIN|</div>
+			</form>
+		</div>
+	</div>
+
+<script language="javascript">
+if (document.searchform) {
+	with (document.searchform) {
+		value.focus();
+		value.select();
+	}
+}
+</script>
+
 	    <div class="sixteen wide column listbox">
 			<h3><i class="user icon"></i> |LANG_ACCOUNTMAG|</h3>
 			<ul class="ui horizontal selection list">

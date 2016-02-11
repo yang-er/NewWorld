@@ -14,9 +14,9 @@
 14=系统在线时间
 15=选择
 16=发送信号
-17=%s您确定您想要结束这些进程?%s
-18=无法验证: 检查您的密码是否正确
-19=无法验证: 无效密码
+17=%s您确定您想要结束这些进程？%s
+18=无法验证：检查您的密码是否正确
+19=无法验证：无效密码
 20=已安装
 21=ID
 22=IP
@@ -33,17 +33,17 @@
 33=结束
 34=IP/用户
 35=您必须选中对象
-36=写入错误 %s : %s
+36=写入错误 %s：%s
 37=添加日期
 38=评论
 39=从跳过列表中移除
 40=提供的值不是一个IP
 41=提供的值不是一个用户名或者邮箱地址
-42=show_blocked_ips.sh 输出:
+42=show_blocked_ips.sh 输出：
 43=无法找到 show_blocked_ips.sh
 44=解除屏蔽
 45=屏蔽日期
 46=无法找到 %s
 47=详情
-48=提供值无效. 提供一个IP或者一个IP段/域名或者泛域名 (*.domain.com)<br><a target=_blank href='http://www.directadmin.com/features.php?id=1252'>更多信息</a>
+48=提供值无效。提供一个IP或者一个IP段/域名或者泛域名 (*.domain.com)<br><a target=_blank href='http://www.directadmin.com/features.php?id=1252'>更多信息</a>
 49=已屏蔽

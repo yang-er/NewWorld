@@ -3,12 +3,11 @@
 |?TREE=&raquo; <a class=tree href="/CMD_USER_BACKUP">`LANG_MANAGE_USER_BACKUPS`</a>|
 |?HELP_SECTION=`RESELLER_HELPER`|
 |HTM_HEADER_FULL|
-
+<h3 class="head_title">|LANG_MANAGE_USER_BACKUPS|</h3>
+|HTM_BREAD|
 <style>
 .step { white-space: nowrap; border: 1px solid light gray;}
 </style>
-
-
 
 <script language="Javascript">
 <!--
@@ -27,7 +26,7 @@ function submitBackup()
 <input type=hidden name=action value="create">
 <tr>
 	<td class=step valign=top>
-			<div>|LANG_STEP_1|: <b>|LANG_WHO|</b></div>
+			<div>|LANG_STEP_1| <b>|LANG_WHO|</b></div>
 			<table width=100% cellspacing=1 cellpadding=0>
 				<tr><td bgcolor="#C0C0C0"> </td></tr>
 				<tr><td height=5> </td></tr>
@@ -73,7 +72,7 @@ function submitBackup()
 			</table>
 	</td>
 	<td class=step valign=top>
-			<div>|LANG_STEP_2|: <b>|LANG_WHEN|</b></div>
+			<div>|LANG_STEP_2| <b>|LANG_WHEN|</b></div>
 			<table width=100% cellspacing=1 cellpadding=0>
 				<tr><td bgcolor="#C0C0C0"> </td></tr>
 				<tr><td height=5> </td></tr>
@@ -112,7 +111,7 @@ function submitBackup()
 
 	</td>
 	<td class=step valign=top>
-			<div>|LANG_STEP_3|: <b>|LANG_WHERE|</b></div>
+			<div>|LANG_STEP_3| <b>|LANG_WHERE|</b></div>
 			<table width=100% cellspacing=1 cellpadding=0>
 				<tr><td bgcolor="#C0C0C0"> </td></tr>
 				<tr><td height=5> </td></tr>
@@ -147,20 +146,10 @@ function submitBackup()
 	</td>
 </tr>
 <tr>
-<td colspan=3 align=right>|LANG_STEP_4|: <input type=button name=backup_submit value="|LANG_SUBMIT|" onClick="submitBackup();"></td>
+<td colspan=3 align=right>|LANG_STEP_4| <input type=button name=backup_submit value="|LANG_SUBMIT|" onClick="submitBackup();"></td>
 </tr>
 </form>
 </table>
-
-<table width=100% cellspacing=1 cellpadding=0>
-	<tr><td bgcolor="#C0C0C0"> </td></tr>
-	<tr><td height=5> </td></tr>
-</table>
-
-
-
-
-
 
 <hr width=50%>
 
@@ -288,11 +277,6 @@ function submitRestore()
 
 <hr width=50%>
 
-<table width=100% cellspacing=1 cellpadding=0>
-	<tr><td bgcolor="#C0C0C0"> </td></tr>
-	<tr><td height=5> </td></tr>
-</table>
-
 <table class=list cellspacing=6 cellpadding=12>
 <tr><td align=center colspan=3><b>|LANG_CURRENT_BACKUP_CRONS|</b></td></tr>
 <tr><td align=center colspan=3 class=step>|CRONS|</td></tr>
@@ -302,39 +286,28 @@ function submitRestore()
 
 <hr width=50%>
 
-<table width=100% cellspacing=1 cellpadding=0>
-	<tr><td bgcolor="#C0C0C0"> </td></tr>
-	<tr><td height=5> </td></tr>
+<table class=list cellspacing=1 cellpadding=3>
+<tr>
+<td class=listtitle colspan=2>|LANG_BACKUP_SETTINGS|</td>
+</tr>
+<form action="/CMD_USER_BACKUP" method="POST">
+<input type=hidden name=action value="setting">
+<tr>
+<td class=list align=center>
+<input type=checkbox name=message value="yes" |SEND_MESSAGE|>
+</td>
+<td class=list>
+|LANG_SEND_MESSAGE|
+</td>
+</tr>
+<tr>
+<td class=list align=center>
+<input type=checkbox name="local_ns" value="yes" |LOCAL_NS|>
+</td>
+<td class=list>
+|LANG_LOCAL_NS|
+</td>
+</tr>
+<tr><td class=listtitle align=right colspan=2><input type=submit value="|LANG_SAVE|"></td></tr>
 </table>
-
-<table class=list cellspacing=6 cellpadding=12>
-<tr><td align=center colspan=3><b>|LANG_BACKUP_SETTINGS|</b></td></tr>
-<tr><td align=center class=step colspan=3>
-	<table class=list cellspacing=1 cellpadding=3>
-	<tr>
-		<td class=listtitle colspan=2>&nbsp;</td>
-	</tr>
-	<form action="/CMD_USER_BACKUP" method="POST">
-	<input type=hidden name=action value="setting">
-	<tr>
-		<td class=list align=center>
-			<input type=checkbox name=message value="yes" |SEND_MESSAGE|>
-		</td>
-		<td class=list>
-			|LANG_SEND_MESSAGE|
-		</td>
-	</tr>
-	<tr>
-		<td class=list align=center>
-			<input type=checkbox name="local_ns" value="yes" |LOCAL_NS|>
-		</td>
-		<td class=list>
-			|LANG_LOCAL_NS|
-		</td>
-	</tr>
-	<tr><td class=listtitle align=right colspan=2><input type=submit value="|LANG_SAVE|"></td></tr>
-	</table>
-</td></tr>
-</table>
-
 |HTM_FOOTER_FULL|

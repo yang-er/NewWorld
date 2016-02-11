@@ -49,10 +49,10 @@
 49=subject_select != %d，但标题没有设定，这是一个错误。
 50='发送时间' 必须是任何、早于或者晚于。
 51=无效的 %s 天数。必须是一个正整数。
-52=无效的 %s 天数，最大值不能超过Max = 
+52=无效的 %s 天数，最大值不能超过
 53=消息
 54=工单
 55=无效的 delete_messages_days 或 delete_tickets_days，必须为0或者正整数。
-56=无效的 delete_messages_days 或 delete_tickets_days，最大值不能超过Max = 
+56=无效的 delete_messages_days 或 delete_tickets_days，最大值不能超过
 57=无法读取工单配置文件
 58=无法保存工单配置

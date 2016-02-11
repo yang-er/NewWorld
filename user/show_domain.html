@@ -171,7 +171,7 @@
 |*endif|
 |*if HAVE_SQUIRRELMAIL="yes"|
 				<li class="item">
-					<a href="|HTTP|://|HOSTNAME|/squirrelmail" target="_blank">
+					<a href="|WEBAPPS_SSL|://|HOSTNAME|/squirrelmail" target="_blank">
 						<img class="ui image" src="IMG_SKIN_ADMIN_057" alt="" />
 						<div class="content">
 							<div class="header">SquirrelMail</div>
@@ -181,7 +181,7 @@
 |*endif|
 |*if HAVE_ROUNDCUBE="yes"|
 				<li class="item">
-					<a href="|HTTP|://|HOSTNAME|/roundcube" target="_blank">
+					<a href="|WEBAPPS_SSL|://|HOSTNAME|/roundcube" target="_blank">
 						<img class="ui image" src="IMG_SKIN_ADMIN_057" alt="" />
 						<div class="content">
 							<div class="header">RoundCube</div>
@@ -240,7 +240,7 @@
         		</li>
 |*endif|
 				<li class="item">
-					<a href="|HTTP|://|HOSTNAME|/phpmyadmin" target="_blank">
+					<a href="|WEBAPPS_SSL|://|HOSTNAME|/phpmyadmin" target="_blank">
 						<img class="ui image" src="IMG_SKIN_ADMIN_042" alt="" />
 						<div class="content">
 							<div class="header">phpMyAdmin</div>
@@ -305,6 +305,19 @@
         				</div>
         			</a>
         		</li>
+|*if LOGIN_KEYS_ENABLED="0"|
+|?USERLOGINKEYS=OFF|
+|*endif|
+|*if USERLOGINKEYS="ON"|
+			    <li class="item">
+					<a href="/CMD_LOGIN_KEYS">
+						<img class="ui image" src="IMG_SKIN_ADMIN_007" alt="" />
+						<div class="content">
+							<div class="header">|LANG_LOGIN_KEYS|</div>
+        				</div>
+        			</a>
+        		</li>
+|*endif|
 |$/usr/local/bin/php
 <?php
 $daplugins = array();

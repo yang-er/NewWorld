@@ -1,28 +1,24 @@
 |?TREE=&raquo; <a class=tree href="/CMD_SECURITY_QUESTIONS">`LANG_SECURITY_QUESTIONS`</a>|
 |HTM_USER_TOP|
-<h3 class="head_title">|LANG_USER_HISTORY|</h3>
-
+<h3 class="head_title">|LANG_SECURITY_QUESTIONS|</h3>
 |HTM_BREAD|
-
-<b>|LANG_SECURITY_QUESTIONS|</b><br>
 
 |?SQ_BOLD_OPEN=|
 |?SQ_BOLD_CLOSE=|
 |*if SECURITY_QUESTIONS_CHECKED=""|
-<br><b>|LANG_FEATURE_OFF|</b><br>
-|LANG_ADD_A_SECURITY_QUESTION|
+<div class="ui red message">
+	<p>|LANG_FEATURE_OFF|</p>
+</div>
+<div class="ui blue message">
+	<p>|LANG_ADD_A_SECURITY_QUESTION|</p>
+</div>
 |?SQ_BOLD_OPEN=<b>|
 |?SQ_BOLD_CLOSE=</b>|
 |*endif|
-
 |USER_QUESTIONS|
-
-<br><br>
-
+<br>
 |SECURITY_QUESTIONS|
-
-<br><br>
-
+<br>
 <table class='list table-highlight' cellpadding=3 cellspacing=1>
 <form name="tableform3" action='CMD_SECURITY_QUESTIONS' method='POST'>
 <input type='hidden' name="action" value="settings" />

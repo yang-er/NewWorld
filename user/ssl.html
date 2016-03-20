@@ -109,7 +109,11 @@ function setRequest(onoff)
 <br>
 <a href="/CMD_SSL?DOMAIN=|DOMAIN|&view=cacert">|LANG_CLICK_HERE|<br><br>
 |*if LETSENCRYPT_RENEWAL_DAYS!=""|
-<div style='padding: 20px; font-weight: bold;'>|LANG_LETSENCRYPT_IN_USE_AUTO_RENEWAL| |LETSENCRYPT_RENEWAL_DAYS| |LANG_LETSENCRYPT_DAYS|.</div>
+<div class="ui green message">
+	<p>|LANG_LETSENCRYPT_IN_USE_AUTO_RENEWAL| |LETSENCRYPT_RENEWAL_DAYS| |LANG_LETSENCRYPT_DAYS|</p>
+</div>
 |*endif|
-|LANG_NOTE|
+<div class="ui blue message">
+	<p>|LANG_NOTE|</p>
+</div>
 |HTM_USER_BOTTOM|
